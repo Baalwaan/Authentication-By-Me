@@ -1,8 +1,6 @@
 const { Pool } = require('pg');
-const { readFileSync } = require('fs');
 
 require('env2')('./config.env');
-
 
 let connectionString = process.env.DATABASE_URL;
 
