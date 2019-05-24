@@ -1,5 +1,5 @@
 const signUp = (req, res) => {
-    res.render('signUp');
+    res.render('signup');
 };
 
 module.exports = signUp;
