@@ -1,1 +1,1 @@
-const bcrypt = require('bcruptjs');
+const bcrypt = require('bcryptjs');
