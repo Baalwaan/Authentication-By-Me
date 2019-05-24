@@ -1,24 +1,19 @@
 <div class="signup-container">
 
-
     <h1>Sign Up...</h1>
 
-    <form action="/signup" method="post">
+    <form action="/there" method="post" onsubmit="return passwordChecker(this)">
         <input type="text" name="first_name" placeholder="First name..."
             pattern="^(?=.{1,20}$)[a-zA-Z]+(?:['_.\s][a-z]+)*$" required>
         <input type="text" name="second_name" placeholder="Second name..."
             pattern="^(?=.{1,20}$)[a-zA-Z]+(?:['_.\s][a-z]+)*$" required>
         <input type="text" name="email" placeholder="Your email..." pattern="[-.\w]+@([\w-]+\.)+[\w-]{2,20}" required>
-        <input type="password" name="password"
+        <input type="password" name="password" id="password"
             pattern="(?=^.{8,20}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$"
             placeholder="Enter password" require>
-        <input type="text" name="confirmed_password"
+        <input type="password" name="confirmed_password" id="confirmed_password"
             pattern="(?=^.{8,20}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$"
             placeholder="Confirm Password" required>
-
         <button>Create Account</button>
     </form>
 </div>
-
-
-{{!-- first_name second_name email password --}}
