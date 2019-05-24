@@ -1,5 +1,10 @@
+const formValidator = require('./formvalidation/formValidator');
 const postUser = (req, res) => {
-    console.log(req.body);
+    formValidator(req.body)
+        .then(response => console.log(response))
+        .catch(err => console.log('Error: ', err));
+
+
     res.end()
     // res.render('postUser');
 };
