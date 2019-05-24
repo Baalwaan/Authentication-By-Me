@@ -9,7 +9,7 @@
     "nodemon": "nodemon ./src/index.js",
     "lint": "eslint . --ext .js",
     "dbBuild": "node ./src/model/database/db_build.js",
-    "TestDbBuild": "NODE_ENV=test ./src/model/database/db_build.js"
+    "TestDbBuild": "NODE_ENV=test node ./src/model/database/db_build.js"
   },
   "author": "",
   "license": "ISC",

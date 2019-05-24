@@ -15,5 +15,6 @@ if (!connectionString) {
 module.exports = new Pool({
     connectionString,
     max: 2,
-    ssl: true
+    // for test database url
+    ssl: !connectionString.includes('localhost')
 });
