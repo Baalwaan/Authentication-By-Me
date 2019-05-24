@@ -13,6 +13,16 @@
         <input type="password" name="confirmed_password" id="confirmed_password"
             pattern="(?=^.{8,20}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$"
             placeholder="Confirm Password" required>
+
+        <p class="error-message">
+            &nbsp; {{!-- <<<white space to stop error message making other elements jump --}}
+            {{#if message}}
+            {{message}}
+            {{/if}}
+            &nbsp;
+        </p>
+
+
         <button>Create Account</button>
     </form>
 </div>
