@@ -1,5 +1,6 @@
 const formValidator = require('./formvalidation/formValidator');
 const checkuserExist = require('../model/queries/checkUserExistQry');
+const postUserQry = require('../model/queries/postUserQry');
 
 const postUser = (req, res) => {
     const { first_name, second_name, email, password, confirmed_password } = req.body;
@@ -7,19 +8,14 @@ const postUser = (req, res) => {
         .then(response => console.log(response))
         .then(response => checkuserExist(email))
         .then(response => {
+            return response ? response : res.render('signUpWrong', { message: 'Account already exists' });
+        })
+        .then(response => {
             if (response) {
-                return response;
-            } else {
-                console.log('Account already exists');
-                res.render('signup', { message: 'Account already exists' })
-                // res.redirect('/signup', { message: 'Account already exists' })
-            };
+                postUserQry(first_name, second_name, email, password)
+            }
         })
         .catch(err => console.log('Error: ', err));
-
-
-    // res.end()
-    // res.render('postUser');
 };
 
 module.exports = postUser;
