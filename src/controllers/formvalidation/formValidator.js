@@ -33,7 +33,7 @@ const formValidator = (obj) => {
 
         if (obj.password !== obj.confirmed_password) {
             alert('Passwords do not match');
-            return false;
+            reject(false);
         }
 
         resolve('Form validated in backend successfully');
