@@ -7,7 +7,7 @@ CREATE TABLE accounts (
   first_name VARCHAR NOT NULL,
   second_name VARCHAR NOT NULL,
   email VARCHAR(320) NOT NULL,
-  hashed_password VARCHAR(20) NOT NULL
+  hashed_password VARCHAR NOT NULL
 );
 
 INSERT INTO accounts (first_name, second_name, email, hashed_password)

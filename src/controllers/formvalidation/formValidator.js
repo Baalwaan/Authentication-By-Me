@@ -1,4 +1,4 @@
-const formValidator = (obj) => {
+const formValidator = (form) => {
     return new Promise((resolve, reject) => {
         // regex Patterns
         const nameRegex = /^(?=.{1,20}$)[a-zA-Z]+(?:['_.\s][a-z]+)*$/;
@@ -7,11 +7,11 @@ const formValidator = (obj) => {
 
         // form inputs array
         const formArr = [
-            obj.first_name,
-            obj.second_name,
-            obj.email,
-            obj.password,
-            obj.confirmed_password,
+            form.first_name,
+            form.second_name,
+            form.email,
+            form.password,
+            form.confirmed_password,
         ];
 
         // array of messages
@@ -31,12 +31,13 @@ const formValidator = (obj) => {
             }
         }
 
-        if (obj.password !== obj.confirmed_password) {
+        if (form.password !== form.confirmed_password) {
             alert('Passwords do not match');
             reject(false);
         }
-
-        resolve('Form validated in backend successfully');
+        console.log('Form validated in backend successfully')
+        // resolve('Form validated in backend successfully');
+        return form.password;
 
     }
 

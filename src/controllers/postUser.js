@@ -1,21 +1,31 @@
+const bcrypt = require('bcryptjs');
+
 const formValidator = require('./formvalidation/formValidator');
 const checkuserExist = require('../model/queries/checkUserExistQry');
 const postUserQry = require('../model/queries/postUserQry');
 
 const postUser = (req, res) => {
-    const { first_name, second_name, email, password, confirmed_password } = req.body;
-    formValidator(req.body)
-        .then(response => console.log(response))
-        .then(response => checkuserExist(email))
+    const form = req.body;
+    const { email, password } = req.body;
+
+    checkuserExist(email)
         .then(response => {
-            return response ? response : res.render('signUpWrong', { message: 'Account already exists' });
-        })
-        .then(response => {
-            if (response) {
-                postUserQry(first_name, second_name, email, password)
+            if (response !== true) {
+                formValidator(req.body)
+            } else {
+                // console.log('1st then in controller')
+                res.render('signUpWrong', { message: 'Account already exists' })
+                throw new Error('Account already exists')
             }
         })
-        .catch(err => console.log('Error: ', err));
+        .then(response => {
+            // console.log('this is password ', password)
+            salt = bcrypt.genSaltSync(10);
+            hashedPassed = bcrypt.hashSync(password, salt);
+            postUserQry(form, hashedPassed);
+        })
+        .catch(err => console.log(err));
+
 };
 
 module.exports = postUser;

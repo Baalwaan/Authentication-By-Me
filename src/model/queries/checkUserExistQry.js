@@ -5,9 +5,9 @@ const checkUser = (email) => {
         .query('SELECT * FROM accounts where email=$1', [email])
         .then(response => {
             if (response.rows.length === 0) {
-                return true;
-            } else {
                 return false;
+            } else {
+                return true;
             }
         }).catch(err => console.log('Error: ', err));
 }
