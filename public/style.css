@@ -36,6 +36,7 @@ main{
     display: flex;
        align-items: center;
     align-content: center;
+    position: relative;
 }
 
 .homepage-container{
@@ -83,4 +84,26 @@ main{
     font-size: 1.2rem;
     font-weight: bold;
     
+}
+
+
+
+.profile-container{
+    width: 100%;
+    position: absolute;
+    
+    top: 0;
+}
+
+.profile-banner{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+}
+
+.profile-banner h2{
+  margin:0;
+  padding-top: 40px;
+  margin-left: 35px;
+    vertical-align: bottom;
 }

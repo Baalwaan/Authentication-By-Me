@@ -8,7 +8,8 @@ const router = express.Router();
 const home = require('./home');
 const signUp = require('./signUp');
 const postUser = require('./postUser');
-
+// for testing
+const profile = require('./profile');
 
 // routes
 router.get('/', home);
@@ -16,5 +17,11 @@ router.get('/signup', signUp);
 
 
 router.post('/postuser', postUser);
+
+
+// testing endpoint
+router.get('/google', home);
+router.get('/profile', profile);
+
 
 module.exports = router;
