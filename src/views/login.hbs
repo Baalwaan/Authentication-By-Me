@@ -1,0 +1,22 @@
+<div class="signup-container modal" id="modal">
+    <img src="./assets/login.png" alt="Login" class="avatar">
+    <h1>Login...</h1>
+
+    <form action="/login" method="post" onsubmit="return loginChecker(this)">
+        <input type="text" name="email" placeholder="Your email..." pattern="[-.\w]+@([\w-]+\.)+[\w-]{2,20}" required>
+        <input type="password" name="password" id="password"
+            pattern="(?=^.{8,20}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$"
+            placeholder="Enter password" require>
+
+        <p class="error-message">
+            &nbsp; {{!-- <<<white space to stop error message making other elements jump --}}
+            {{#if message}}
+            {{message}}
+            {{/if}}
+            &nbsp;
+        </p>
+
+
+        <button>Login</button>
+    </form>
+</div>

@@ -37,3 +37,40 @@ passwordChecker = (form) => {
   }
   return true;
 };
+
+
+loginChecker = (form) => {
+  const emailRegex = /[-.\w]+@([\w-]+\.)+[\w-]{2,20}/i;
+  const passwordRegex = /(?=^.{8,20}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$/;
+
+
+  if (!emailRegex.test(form.email.value)) {
+    alert('Please ensure email is in correct format.');
+    return false
+  }
+
+  if (!passwordRegex.test(form.password.value)) {
+    alert('Passwords must contain at least 8-20 characters, including uppercase, lowercase letters, numbers and special characters.');
+    return false
+  }
+
+  return true;
+}
+
+
+
+// login = document.getElementById('login');
+// homepage_container = document.getElementsByClassName('homepage-container')[0];
+
+// login.addEventListener('click', () => {
+//   homepage_container.style.display = 'none';
+//   modal.style.display = "block";
+// });
+
+// window.addEventListener('click', (e) => {
+//   if (e.target == modal) {
+//     homepage_container.style.display = 'flex';
+//     modal.style.display = "none";
+//   }
+// })
+

@@ -107,3 +107,17 @@ main{
   margin-left: 35px;
     vertical-align: bottom;
 }
+
+
+/* .modal{
+    display: none;
+} */
+
+.form-modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+}
+
