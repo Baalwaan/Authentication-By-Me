@@ -1,5 +1,5 @@
 const loginPage = (req, res) => {
-    res.render('login');
+  res.render('login');
 };
 
 module.exports = loginPage;

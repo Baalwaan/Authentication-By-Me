@@ -1,9 +1,9 @@
-const jwt = require("jsonwebtoken");
+const jwt = require('jsonwebtoken');
 
-const { checkUserLogin } = require("../model/queries/checkUserExistQry");
-const formValidator = require("./formvalidation/formValidator");
-const getHashQuery = require("../model/queries/getHashQuery");
-const comparePassword = require("./authentication/comparePassword");
+const { checkUserLogin } = require('../model/queries/checkUserExistQry');
+const formValidator = require('./formvalidation/formValidator');
+const getHashQuery = require('../model/queries/getHashQuery');
+const comparePassword = require('./authentication/comparePassword');
 
 const login = (req, res) => {
   const form = req.body;
@@ -13,21 +13,21 @@ const login = (req, res) => {
     .then(response => formValidator(form))
     .then(response => getHashQuery(email))
     .then(response => comparePassword(password, response.hashed_password))
-    .then(response => {
+    .then((response) => {
       const token = jwt.sign(
         { loggedin: true, user_email: email },
-        process.env.SECRET
+        process.env.SECRET,
       );
 
-      res.cookie("RememberMe", token, {
+      res.cookie('RememberMe', token, {
         maxAge: 900000,
         httpOnly: false,
-        loggedin: true
+        loggedin: true,
       });
-      res.render("profile", { email: email });
+      res.render('profile', { email });
     })
-    .catch(err => {
-      res.render("login", { message: err });
+    .catch((err) => {
+      res.render('login', { message: err });
     });
 };
 

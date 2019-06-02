@@ -46,17 +46,16 @@ loginChecker = (form) => {
 
   if (!emailRegex.test(form.email.value)) {
     alert('Please ensure email is in correct format.');
-    return false
+    return false;
   }
 
   if (!passwordRegex.test(form.password.value)) {
     alert('Passwords must contain at least 8-20 characters, including uppercase, lowercase letters, numbers and special characters.');
-    return false
+    return false;
   }
 
   return true;
-}
-
+};
 
 
 // login = document.getElementById('login');
@@ -73,4 +72,3 @@ loginChecker = (form) => {
 //     modal.style.display = "none";
 //   }
 // })
-

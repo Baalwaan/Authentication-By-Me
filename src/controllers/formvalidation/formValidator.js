@@ -5,25 +5,18 @@ const formValidator = form => new Promise((resolve, reject) => {
   const passwordRegex = /(?=^.{8,20}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$/;
 
 
-
-  //login validator only
+  // login validator only
   if (Object.keys(form).length === 2) {
     if (!emailRegex.test(form.email)) {
       reject('Please ensure email is in correct format.');
-      return
+      return;
     }
     if (!passwordRegex.test(form.password)) {
       reject('Passwords must contain at least 8-20 characters, including uppercase, lowercase letters, numbers and special characters.');
-      return
-
+      return;
     }
     resolve('backend login validation success');
-  }
-
-
-
-
-  else {
+  } else {
     // form inputs array
     const formArr = [
       form.first_name,
@@ -43,9 +36,6 @@ const formValidator = form => new Promise((resolve, reject) => {
 
     // regex patterns stored in array
     const regexArr = [nameRegex, nameRegex, emailRegex, passwordRegex, passwordRegex];
-
-
-
 
 
     for (let i = 0; i < regexArr.length; i++) {
