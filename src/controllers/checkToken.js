@@ -1,0 +1,1 @@
+const checkToken = (req, res) => {};

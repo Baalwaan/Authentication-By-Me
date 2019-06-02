@@ -1,6 +1,11 @@
 <nav>
     <div class="navbar">
+
+        {{#if email}}
+        <a class="navbar-buttons" href="/logout">Log Out</a>
+        {{else}}
         <a class="navbar-buttons" href="/signup">Sign Up</a>
         <a class="navbar-buttons" href="/loginpage">Login</a>
+        {{/if}}
     </div>
 </nav>
