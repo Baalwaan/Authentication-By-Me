@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "testDB": "NODE_ENV=test node ./src/tests/db.test.js | tap-spec",
     "start": "node ./src/index.js",
     "nodemon": "nodemon ./src/index.js",
     "lint": "eslint . --ext .js",
@@ -29,6 +30,7 @@
     "jest": "^24.8.0",
     "nodemon": "^1.19.0",
     "nyc": "^14.1.1",
+    "object-assign": "^4.1.1",
     "supertest": "^4.0.2",
     "tap-spec": "^5.0.0",
     "tape": "^4.10.2"

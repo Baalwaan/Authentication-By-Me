@@ -13,22 +13,27 @@ const login = (req, res) => {
     .then(response => formValidator(form))
     .then(response => getHashQuery(email))
     .then(response => comparePassword(password, response.hashed_password))
-    .then((response) => {
+    .then(response => {
       const token = jwt.sign(
         { loggedin: true, user_email: email },
-        process.env.SECRET,
+        process.env.SECRET
       );
 
       res.cookie('RememberMe', token, {
         maxAge: 900000,
         httpOnly: false,
-        loggedin: true,
+        loggedin: true
       });
       res.render('profile', { email });
     })
-    .catch((err) => {
+    .catch(err => {
       res.render('login', { message: err });
     });
 };
+
+process.on('unhandledRejection', error => {
+  // Will print "unhandledRejection err is not defined"
+  console.log('unhandledRejection', error);
+});
 
 module.exports = login;
