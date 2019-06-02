@@ -58,8 +58,8 @@ main {
 }
 
 .signup-container form input {
-  width: 200px;
-  height: 50px;
+  min-width: 250px;
+  min-height: 50px;
   font-size: 1.5em;
 }
 
@@ -76,24 +76,27 @@ button {
   font-size: 24px;
 }
 
+.message-container {
+  height: 50px;
+}
+
 .error-message {
   color: red;
   text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: bolder;
 }
 
 .successfull-message {
   color: green;
   text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: bolder;
 }
 
 .profile-container {
   width: 100%;
   position: absolute;
-
   top: 0;
 }
 

@@ -14,13 +14,11 @@
             pattern="(?=^.{8,20}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$"
             placeholder="Confirm Password" required>
 
-        <p class="error-message">
-            &nbsp; {{!-- <<<white space to stop error message making other elements jump --}}
+        <div class="message-container">
             {{#if message}}
-            {{message}}
+            <p class="error-message">{{message}}</p>
             {{/if}}
-            &nbsp;
-        </p>
+        </div>
 
 
         <button>Create Account</button>

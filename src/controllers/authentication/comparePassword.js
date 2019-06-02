@@ -7,7 +7,7 @@ const comparePassword = (password, hashed_password) => {
         resolve(true);
       } else {
         console.log("wrongpassword do not match");
-        reject("Your account or password is incorrect");
+        reject("Account or password is incorrect.");
       }
     });
   });

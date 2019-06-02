@@ -1,4 +1,4 @@
-<div class="signup-container modal" id="modal">
+<div class="signup-container">
     <img src="./assets/login.png" alt="Login" class="avatar">
     <h1>Login...</h1>
 
@@ -8,22 +8,17 @@
             pattern="(?=^.{8,20}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$"
             placeholder="Enter password" require>
 
-        <p class="error-message">
-            &nbsp; {{!-- <<<white space to stop error message making other elements jump --}}
+
+        <div class="message-container">
             {{#if message}}
-            {{message}}
+            <p class="error-message">{{message}}</p>
             {{/if}}
-            &nbsp;
-        </p>
 
-
-        <p class="successfull-message">
-            &nbsp; {{!-- <<<white space to stop error message making other elements jump --}}
             {{#if successfull_message}}
-            {{successfull_message}}
+            <p class="successfull-message">{{successfull_message}}</p>
             {{/if}}
-            &nbsp;
-        </p>
+
+        </div>
 
         <button>Login</button>
     </form>
