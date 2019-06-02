@@ -1,123 +1,122 @@
-body{
-    margin: 0;
-    height: 100%;
-    width:100%;
-
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
-.navbar{
-    text-align: right;
-    width: 100%;
-    padding: 15px 0;
-    margin-bottom: 10px;
-    background: black;
+.navbar {
+  text-align: right;
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 10px;
+  background: black;
 }
 
-.navbar-buttons{
-    margin-right: 25px;
-    text-decoration: none;
-    color: white;
-    border-bottom: solid 2px transparent;
+.navbar-buttons {
+  margin-right: 25px;
+  text-decoration: none;
+  color: white;
+  border-bottom: solid 2px transparent;
 }
 
-.navbar-buttons:hover{
-    border-bottom: solid 2px white;
-
+.navbar-buttons:hover {
+  border-bottom: solid 2px white;
 }
-main{
-    border: solid black;
-    width: 50%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-       align-items: center;
-    align-content: center;
-    position: relative;
-}
-
-.homepage-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-}
-.homepage-container h1{
-    text-align: center;
+main {
+  border: solid black;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  position: relative;
 }
 
-.signup-container{
-    margin: auto;
+.homepage-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.homepage-container h1 {
+  text-align: center;
 }
 
-.signup-container form{
-    display: flex;
-    flex-direction: column;
+.signup-container {
+  margin: auto;
 }
 
-.signup-container form input{
-    width: 200px;
-    height: 50px;
-    font-size: 1.5em;
+.signup-container form {
+  display: flex;
+  flex-direction: column;
 }
 
-.signup-container form input:valid{
- color: green;
+.signup-container form input {
+  width: 200px;
+  height: 50px;
+  font-size: 1.5em;
 }
 
-.signup-container form input:invalid{
-    color: red;
+.signup-container form input:valid {
+  color: green;
 }
 
-   button{
-       margin-top: 20px;
-       font-size: 24px;
+.signup-container form input:invalid {
+  color: red;
 }
 
-.error-message{
-    color: red;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    
+button {
+  margin-top: 20px;
+  font-size: 24px;
 }
 
-
-
-.profile-container{
-    width: 100%;
-    position: absolute;
-    
-    top: 0;
+.error-message {
+  color: red;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.profile-banner{
-    width: 100%;
-    display: flex;
-    justify-content:center;
+.successfull-message {
+  color: green;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.profile-banner h2{
-  margin:0;
+.profile-container {
+  width: 100%;
+  position: absolute;
+
+  top: 0;
+}
+
+.profile-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-banner h2 {
+  margin: 0;
   padding-top: 40px;
   margin-left: 35px;
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
-
 
 /* .modal{
     display: none;
 } */
 
-.form-modal{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-
+.form-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
-

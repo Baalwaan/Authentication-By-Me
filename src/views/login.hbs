@@ -17,6 +17,14 @@
         </p>
 
 
+        <p class="successfull-message">
+            &nbsp; {{!-- <<<white space to stop error message making other elements jump --}}
+            {{#if successfull_message}}
+            {{successfull_message}}
+            {{/if}}
+            &nbsp;
+        </p>
+
         <button>Login</button>
     </form>
 </div>

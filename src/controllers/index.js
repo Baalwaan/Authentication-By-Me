@@ -11,6 +11,7 @@ const postUser = require("./postUser");
 const login = require("./login");
 const loginPage = require("./loginPage");
 const logOut = require("./logout");
+const checkToken = require("./checkToken");
 // for testing
 const profile = require("./profile");
 
@@ -20,7 +21,7 @@ router.get("/signup", signUp);
 router.get("/loginpage", loginPage);
 
 // if endpoint is profile
-// router.get("/profile", checkToken);
+
 router.get("/logout", logOut);
 
 router.post("/postuser", postUser);
@@ -28,6 +29,6 @@ router.post("/login", login);
 
 // testing endpoint
 router.get("/google", home);
-router.get("/profile", profile);
+router.get("/profile", checkToken);
 
 module.exports = router;
