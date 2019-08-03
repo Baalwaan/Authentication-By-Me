@@ -37,6 +37,16 @@ So i decided to build a simple sign up and login form 😊.
 - Db_connection file for pool (to connect to db)
 - Db_build to build database to heroku and local (test database)
 
+
+### Learnt from Bcrypt
+
+- Using Bcrypt as part of my server side validation.
+- using BCRYPT to salt and hash passwords in order to create unique hashes before storing it in a PostgreSQL database.
+- BCRYPT is also used for when existing user in the database would attempt to login (BCRYPT compare to compare plain vs hashed passwords).
+
+![](https://media3.giphy.com/media/QOgvV9rV4hHpgNRBfQ/giphy.gif?cid=790b76115d4579e53162726551468b94&rid=giphy.gif)
+
+
 ### JWT 
 
 ![](https://cdn-images-1.medium.com/max/1600/1*SSXUQJ1dWjiUrDoKaaiGLA.png)
@@ -46,6 +56,11 @@ So i decided to build a simple sign up and login form 😊.
 - How to create test database. In pool object ensure ssl is false when wanting to build a test database.
 - In PGCLI create db and name it your project. 
 - Then feed that at the end of TEST_DATABASE_URL, eg. (Postgress://test:test1234@localhost:5432/dbname)
+
+
+### Challenges
+
+- Most logic written using PROMISES, which is still an area of interest I am currently trying to learn more about.
 
 ### Testing
 
