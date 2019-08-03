@@ -3,7 +3,7 @@
 
 Curious about how sensitive information can be stored in and accessed from databases securely.
 
-So i decided to build a simple sign up and login form :smile
+So i decided to build a simple sign up and login form :Smile:
 
 ![](https://i.imgur.com/yp0yAFE.png)
 
